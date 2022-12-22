@@ -7,9 +7,7 @@
     <meta name="description" content="Start your development with JohnDoe landing page.">
     <meta name="author" content="Devcrud">
     <title>VINEETH CHANDRAN</title>
-    <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + JohnDoe main styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/imgs/icon.jpg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,7 +37,7 @@
                 <h4 class="header-subtitle">Hello, I am</h4>
                 <h2 class="header-title">Vineeth Chandran</h2>
                 <h6 class="header-mono">Flutter Developer| Web Designer</h6>
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                <button  onclick="window.location.href='https://drive.google.com/file/d/19BNCLLB48cAikeRUTcy2XZn7lpC_uMa9/view?usp=share_link';" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
             </div>
         </div>
     </header>
@@ -665,9 +663,6 @@
             <h2 class="text-light mb-5 font-weight-normal">Connect to me on WhatsApp</h2>
             <a target="_blank" href="https://api.whatsapp.com/send/?phone=9074492664&text&type=phone_number&app_absent=0">Click here <img
                 id="whatsapp" src="assets/imgs/icons8-whatsapp-48.png" alt=""></a>
-            <!-- <button class="btn  w-lg"
-                onclick="window.location.href='https://api.whatsapp.com/send/?phone=9074492664&text&type=phone_number&app_absent=0';" ><img
-                    id="whatsapp" src="assets/imgs/icons8-whatsapp-48.png" alt=""></button> -->
         </div>
     </section>
 
@@ -686,7 +681,7 @@
                                 <input class="form-control" type="email" placeholder="Email *" required name="email" id="email">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="number" placeholder="Phone Number *" required
+                                <input class="form-control" type="text" placeholder="Phone Number *" required
                                     name="phone" id="phone">
                             </div>
                             <div class="form-group">
@@ -758,32 +753,28 @@
     </footer>
 
     <!-- core  -->
+    
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="assets/js/script2.js"></script>
 
     <!-- bootstrap 3 affix -->
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Isotope  -->
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
-
-    <!-- Google mpas -->
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script> -->
-
-    <!-- JohnDoe js -->
     <script src="assets/js/script.js"></script>
     <script>
         $("#submit-form").submit((e) => {
             e.preventDefault()
             $.ajax({
-                // url: "https://script.google.com/macros/s/AKfycbw5BVD_q09pyekmgg9ZWgrPKzcQ8QEeTR8JF5UQSYCgVSnZdQ67wWUxHGTWeDeTCZzg/exec",
                 url:"https://script.google.com/macros/s/AKfycbyw-JI0p1G5lzDrzFVjig8tiJ3ld2p_ltYKlgJFFFsjX7zbMSDr-E8lw9ydvIEx6rgwTA/exec",
                 data: $("#submit-form").serialize(),
                 method: "post",
                 success: function (response) {
                     alert("Form submitted successfully")
                     window.location.reload()
-                    //window.location.href="https://google.com"
                 },
                 error: function (err) {
                     alert("Something Error")
@@ -792,6 +783,7 @@
             })
         })
     </script>
+
 
 </body>
 
