@@ -148,3 +148,9 @@ function initMap() {
       ]
     });
 }
+function resume()
+{
+  document.getElementById("myButton").onclick = function () {
+    location.href = "https://drive.google.com/file/d/19BNCLLB48cAikeRUTcy2XZn7lpC_uMa9/view?usp=share_link";
+};
+}
