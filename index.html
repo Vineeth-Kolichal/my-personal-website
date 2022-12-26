@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/imgs/icon.jpg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/script2.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -393,8 +394,9 @@
                 <div class="portfolio-container">
                     <div class="col-md-6 col-lg-4 web new">
                         <div class="portfolio-item">
-                            <a href="https://vineeth-kolichal.github.io/kfc-home-page/" target="_blank"><img src="assets/imgs/wb1.png" class="img-fluid"
-                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"></a>
+                            <a href="https://vineeth-kolichal.github.io/kfc-home-page/" target="_blank"><img
+                                    src="assets/imgs/wb1.png" class="img-fluid"
+                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"></a>
                             <!-- <div class="content-holder">
                                 <a class="img-popup" href="assets/imgs/web-2.jpg"></a>
                                 <div class="text-holder">
@@ -404,12 +406,14 @@
                             </div> -->
                         </div>
                     </div>
-                
+
                     <div class="portfolio-container">
                         <div class="col-md-6 col-lg-4 web new">
                             <div class="portfolio-item">
-                                <a href="https://vineeth-kolichal.github.io/upstox.com-home-page-clone/" target="_blank"><img src="assets/imgs/Screenshot from 2022-12-26 11-54-37.png" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"></a>
+                                <a href="https://vineeth-kolichal.github.io/upstox.com-home-page-clone/"
+                                    target="_blank"><img src="assets/imgs/Screenshot from 2022-12-26 11-54-37.png"
+                                        class="img-fluid"
+                                        alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates"></a>
                                 <!-- <div class="content-holder">
                                     <a class="img-popup" href="assets/imgs/web-2.jpg"></a>
                                     <div class="text-holder">
@@ -420,7 +424,7 @@
                             </div>
                         </div>
 
-                    <!-- <div class="col-md-6 col-lg-4 advertising">
+                        <!-- <div class="col-md-6 col-lg-4 advertising">
                         <div class="portfolio-item">
                             <img src="assets/imgs/advertising-1.jpg" class="img-fluid"
                                 alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
@@ -433,20 +437,20 @@
                             </div>
                         </div>
                     </div> -->
-                  
-                    <div class="col-md-6 col-lg-4 advertising new">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/advertising-3.jpg" class="img-fluid"
-                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">ADVERSITING</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+
+                        <div class="col-md-6 col-lg-4 advertising new">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/advertising-3.jpg" class="img-fluid"
+                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">ADVERSITING</h6>
+                                        <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -485,8 +489,8 @@
                     </div>
                 </div><!-- end of blog wrapper -->
 
-                <!-- blog-card -->
-                <!-- <div class="blog-card">
+    <!-- blog-card -->
+    <!-- <div class="blog-card">
                     <div class="img-holder">
                         <img src="assets/imgs/blog2.jpg"
                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
@@ -511,8 +515,8 @@
                         <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
                     </div>
                 </div>end of blog wrapper -->
-                <!-- blog-card -->
-                <!-- <div class="blog-card">
+    <!-- blog-card -->
+    <!-- <div class="blog-card">
                     <div class="img-holder">
                         <img src="assets/imgs/blog3.jpg"
                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
@@ -538,8 +542,8 @@
                     </div>
                 </div><!-- end of blog wrapper -->
 
-            </div>
-        </div>
+    </div>
+    </div>
     </section> --> -->
     <section class="section bg-dark py-5" id="contact">
         <div class="container text-center">
@@ -557,25 +561,46 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Send a message</h4>
-                        <form id="submit-form" action="">
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Name *" required name="name"
+                        <form id="submit-form" onsubmit="return validateform()">
+                            <!-- <div class="form-group">
+                                <input class="form-control1" type="text" placeholder="Name *" required name="name"
                                     id="name">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" required name="email"
+                                <input class="form-control1" type="email" placeholder="Email *" required name="email"
                                     id="email">
                             </div>
-                            <!-- <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Phone Number *" required
-                                    name="phone" id="phone">
-                            </div> -->
                             <div class="form-group">
-                                <textarea itemid="message" class="form-control" id=" placeholder=" Message *" rows="7"
+                                <input class="form-control1" type="text" placeholder="Phone Number *" required
+                                    name="phone" id="phone">
+                            </div>
+                            <div class="form-group">
+                                <textarea itemid="message" class="form-control1" id=" placeholder=" Message *" rows="7"
                                     required name="message"></textarea>
                             </div>
                             <div class="form-group ">
-                                <button type="submit" class="form-control btn btn-primary">Send Message</button>
+                                <button type="submit" class="form-control1 btn btn-primary">Send Message</button>
+                            </div> -->
+
+
+                            <div class="form-group1">
+                                <input class="form-control1" type="text" required placeholder="Name*" name="name"
+                                    id="name">
+                            </div>
+                            <!-- <div class="form-group1">
+                                <input class="form-control1" type="text" required placeholder="e-mail*" name="email"
+                                    id="email">
+                            </div> -->
+                            <div class="form-group1">
+                                <input class="form-control1" type="text" required placeholder="Phone number"
+                                    name="phone" id="phone">
+                            </div>
+                            <div class="form-group1">
+                                <textarea class="form-control1" name="message" required id="message"
+                                    placeholder="Message" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-group1">
+                                <button class="form-control1 btn-primary" type="submit">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -652,22 +677,45 @@
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        $("#submit-form").submit((e) => {
-            e.preventDefault()
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbyw-JI0p1G5lzDrzFVjig8tiJ3ld2p_ltYKlgJFFFsjX7zbMSDr-E8lw9ydvIEx6rgwTA/exec",
-                data: $("#submit-form").serialize(),
-                method: "post",
-                success: function (response) {
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                },
-                error: function (err) {
-                    alert("Something Error")
 
-                }
+    </script>
+    <script>
+        function validateform() {
+            var name1 = document.getElementById('name').value;
+            var emailId = document.getElementById('email').value;
+            var phoneNum = document.getElementById('phone').value;
+
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            if (name1 == null || name1 == "") {
+                alert("Name can't be blank");
+                return false;
+            } else if (emailId.match(mailformat)) {
+                alert("invalid mail id");
+                return false;
+            }
+            else if (typeof phoneNum == 'number' || phoneNum.length < 10) {
+                alert("check phone number")
+
+            }
+            $("#submit-form").submit((e) => {
+                e.preventDefault()
+                $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbyw-JI0p1G5lzDrzFVjig8tiJ3ld2p_ltYKlgJFFFsjX7zbMSDr-E8lw9ydvIEx6rgwTA/exec",
+                    data: $("#submit-form").serialize(),
+                    method: "post",
+                    success: function (response) {
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                    },
+                    error: function (err) {
+                        alert("Something Error")
+
+                    }
+                })
             })
-        })
+
+        } 
     </script>
 
 
