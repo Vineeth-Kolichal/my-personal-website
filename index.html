@@ -561,7 +561,7 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Send a message</h4>
-                        <form id="submit-form" onsubmit="return validateform()">
+                        <form id="submit-form">
                             <!-- <div class="form-group">
                                 <input class="form-control1" type="text" placeholder="Name *" required name="name"
                                     id="name">
@@ -584,23 +584,27 @@
 
 
                             <div class="form-group1">
-                                <input class="form-control1" type="text" required placeholder="Name*" name="name"
-                                    id="name">
-                            </div>
-                            <!-- <div class="form-group1">
-                                <input class="form-control1" type="text" required placeholder="e-mail*" name="email"
-                                    id="email">
-                            </div> -->
-                            <div class="form-group1">
-                                <input class="form-control1" type="text" required placeholder="Phone number"
-                                    name="phone" id="phone">
+                                <input class="form-control1" type="text"  placeholder="Name*" name="name"
+                                    id="name" onkeydown="return /[a-z]/i.test(event.key)" onkeyup="validateform()">
+                                    <small class="message" id="name-msg"></small>
                             </div>
                             <div class="form-group1">
-                                <textarea class="form-control1" name="message" required id="message"
-                                    placeholder="Message" cols="30" rows="10"></textarea>
+                                <input class="form-control1" type="text" placeholder="e-mail*" name="email"
+                                    id="email" onkeyup="validateform()">
+                                    <small class="message" id="email-msg"></small>
                             </div>
                             <div class="form-group1">
-                                <button class="form-control1 btn-primary" type="submit">Send Message</button>
+                                <input class="form-control1" type="number" placeholder="Phone number"
+                                    name="phone" id="phone"onkeyup="validateform()">
+                                    <small class="message" id="phone-msg"></small>
+                            </div>
+                            <div class="form-group1">
+                                <textarea class="form-control1" name="message" id="message"
+                                    placeholder="Message" cols="30" rows="10"onkeyup="validateform()"></textarea>
+                                    <small class="message" id="msg-msg"></small>
+                            </div>
+                            <div class="form-group1">
+                                <button id="submit-button-id" class="form-control1 button-submit" type="submit" onclick="submitToSheet()">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -677,45 +681,10 @@
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-
+       
     </script>
     <script>
-        function validateform() {
-            var name1 = document.getElementById('name').value;
-            var emailId = document.getElementById('email').value;
-            var phoneNum = document.getElementById('phone').value;
-
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-            if (name1 == null || name1 == "") {
-                alert("Name can't be blank");
-                return false;
-            } else if (emailId.match(mailformat)) {
-                alert("invalid mail id");
-                return false;
-            }
-            else if (typeof phoneNum == 'number' || phoneNum.length < 10) {
-                alert("check phone number")
-
-            }
-            $("#submit-form").submit((e) => {
-                e.preventDefault()
-                $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbyw-JI0p1G5lzDrzFVjig8tiJ3ld2p_ltYKlgJFFFsjX7zbMSDr-E8lw9ydvIEx6rgwTA/exec",
-                    data: $("#submit-form").serialize(),
-                    method: "post",
-                    success: function (response) {
-                        alert("Form submitted successfully")
-                        window.location.reload()
-                    },
-                    error: function (err) {
-                        alert("Something Error")
-
-                    }
-                })
-            })
-
-        } 
+        
     </script>
 
 
