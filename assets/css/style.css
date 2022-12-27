@@ -11718,6 +11718,11 @@ pre .code {
   background-color: #F85C70  ;
   color: white;
 }
+#submit-button-id:hover
+{
+  background-color: #F85C60 ;
+  color: white;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
