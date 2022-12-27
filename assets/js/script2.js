@@ -7,7 +7,7 @@ function validateMail() {
     if (emailId == null || emailId == "") {
         document.getElementById("email-msg").innerHTML = "Email can't blank";
     } else if (emailId.match(mailformat)) {
-        flag = 2
+        flag = flag+1;
         document.getElementById("email-msg").innerHTML = "";
     }
     else {
@@ -22,7 +22,7 @@ function validateName(){
     } else if (name1.length < 3) {
         document.getElementById("name-msg").innerHTML = "Name should have 3 letter minimum !";
     } else {
-        flag = 1
+        flag = flag+1;
         document.getElementById("name-msg").innerHTML = "";
     }
 }
@@ -36,7 +36,7 @@ function validatePhone(){
     }else if (phoneNum.length > 10) {
         document.getElementById("phone-msg").innerHTML = "Mobile number should be 10 digit";
     } else {
-        flag = 3
+        flag = flag+1;
         document.getElementById("phone-msg").innerHTML = "";
     }
 }
@@ -46,13 +46,14 @@ function validateMessage(){
     if (messageEntered == null || messageEntered == "") {
         document.getElementById("msg-msg").innerHTML = "Message can't blank";
     } else {
-        flag = 4;
+        flag = flag+1;
         document.getElementById("msg-msg").innerHTML = "";
     }
 }
 
 
 function submitToSheet() {
+    flag=0;
     validateName();
     validateMail();
     validatePhone();
