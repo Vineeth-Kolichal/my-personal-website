@@ -30,9 +30,11 @@ function validateName(){
 function validatePhone(){
     var phoneNum = document.getElementById('phone').value;
     if (phoneNum == null || phoneNum == "") {
-        document.getElementById("phone-msg").innerHTML = "phone number can't blank";
+        document.getElementById("phone-msg").innerHTML = "Mobile number can't blank";
     } else if (phoneNum.length < 10) {
-        document.getElementById("phone-msg").innerHTML = "Phone number should be 10 digit";
+        document.getElementById("phone-msg").innerHTML = "Mobile number should be 10 digit";
+    }else if (phoneNum.length > 10) {
+        document.getElementById("phone-msg").innerHTML = "Mobile number should be 10 digit";
     } else {
         flag = 3
         document.getElementById("phone-msg").innerHTML = "";
