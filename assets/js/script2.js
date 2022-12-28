@@ -19,8 +19,8 @@ function validateName(){
     var name1 = document.getElementById('name').value;
     if (name1 == null || name1 == "") {
         document.getElementById("name-msg").innerHTML = "Name Can't be blank !";
-    } else if (name1.length < 3) {
-        document.getElementById("name-msg").innerHTML = "Name should have 3 letter minimum !";
+    } else if (/^[a-zA-Z ]+$/.test(name1)==false) {
+        document.getElementById("name-msg").innerHTML = "Check the name!";
     } else {
         flag = flag+1;
         document.getElementById("name-msg").innerHTML = "";
