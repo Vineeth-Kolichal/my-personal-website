@@ -45,6 +45,9 @@ function validateMessage(){
     var messageEntered = document.getElementById('message').value;
     if (messageEntered == null || messageEntered == "") {
         document.getElementById("msg-msg").innerHTML = "Message can't blank";
+    }else if(messageEntered.length<20){
+        var len=20-messageEntered.length;
+        document.getElementById("msg-msg").innerHTML = len + " more character required";
     } else {
         flag = flag+1;
         document.getElementById("msg-msg").innerHTML = "";
