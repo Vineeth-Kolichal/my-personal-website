@@ -31,7 +31,9 @@ function validatePhone(){
     var phoneNum = document.getElementById('phone').value;
     if (phoneNum == null || phoneNum == "") {
         document.getElementById("phone-msg").innerHTML = "Mobile number can't blank";
-    } else if (phoneNum.length < 10) {
+    } else if(/^[0-9]*$/.test(phoneNum)==false){
+        document.getElementById("phone-msg").innerHTML = "Please enter number";
+    }else if (phoneNum.length < 10) {
         document.getElementById("phone-msg").innerHTML = "Mobile number should be 10 digit";
     }else if (phoneNum.length > 10) {
         document.getElementById("phone-msg").innerHTML = "Mobile number should be 10 digit";
