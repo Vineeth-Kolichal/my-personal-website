@@ -4,7 +4,7 @@ function validateMail() {
     
     var emailId = document.getElementById('email').value;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (emailId == null || emailId == "") {
+    if (emailId == null || emailId ==" ") {
         document.getElementById("email-msg").innerHTML = "Email can't blank";
     } else if (emailId.match(mailformat)) {
         flag = flag+1;
@@ -19,7 +19,7 @@ function validateName(){
     var name1 = document.getElementById('name').value;
     if (name1 == null || name1 == "") {
         document.getElementById("name-msg").innerHTML = "Name Can't be blank !";
-    } else if (/^[a-zA-Z ]+$/.test(name1)==false) {
+    } else if (/^[a-zA-Z]+(\s{0,1}[a-zA-Z])*$/.test(name1)==false) {
         document.getElementById("name-msg").innerHTML = "Check the name!";
     } else {
         flag = flag+1;
